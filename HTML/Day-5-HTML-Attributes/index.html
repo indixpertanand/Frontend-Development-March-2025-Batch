@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes</title>
+    <style>
+        .text-red{
+            color: red;
+        }
+        .bg-aqua{
+            background-color: aqua;
+        }
+        .bg-yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header id="top-header" class="header">
+        <h1>HTML Attribute</h1>
+    </header>
+    <main>
+        <h2>About Indixpert</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iusto nam quia dicta, sunt placeat suscipit excepturi ex ratione enim.</p>
+        <a href="#" tabindex="1" title="click here to know more about indixpert">
+        <img width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAV1BMVEX///8AAADQ0NDNzc3S0tLU1NTKysrp6elwcHD7+/sHBwfW1tZSUlLt7e0hISGoqKgvLy+ZmZm1tbWgoKDDw8MPDw+Hh4cyMjKnp6e7u7sfHx/h4eEpKSkdF87DAAACMElEQVR4nO3d2W7CMBRFUYehQCmEqXP//zv7UFVFJI76YGR5372+4B4dxwmh1ClJkiRJkiRJkiRJkiQ1bNYfT9vaQ9zPat39OG5qj3IfffcH2eO5u/ZQe5zy5l0Hj/h1k7Cb156osMttQFyL62FCWIuDRYpr8XEsIarF59GEpBYP4wlBLb5kEnJa3OYSclp8wkfcZRNiIi74EWf8iLcfL4ARY7c4qz1bIQEWqhEJYkekbDfeNAhskcAdlSB2RBdqMwK82LBFgomnG1tsRoAWA0QMsFC9aRDYIoE7KkGAFgNEDLBQvWkQ2CKBOyrBRMQALRqxGRPbzaL2bIUsQ7e4rD1bIbZIMLGjUrabiYgBWgwQcVV7tkLy282+9mil5G8afe3RSsm2+Fp7smKyLVKuxHyLmJ+9pfQ2nvC99lzF5DqkvNPgX4fZvfRQe7JC8PfD/DPNR+3Ryph4Lv2sPVsR+M8W+I/A+ID49zT4d234t9422Dr8d0/4L7rxAfHf49tg6/B/E2WDrcM3iN9F8QFdoq3DN+htonU22Dr8LooPiF+i+E0G/y+xbLB1Ntg6/D/CwgeMvETdZJrgNdg6r8HW4a9BfMDISxS/yTB+HRL5GmQ0iH9tOHHeE6NB/pld+XPXIA0GODtv9JROzhJNEc6w5J9Duoc3GOE8YP6ZzsPDZGkBB8/duIApnekBUzpdBWT8xHVg97uhHmtPcj+by/nYs24SkiRJkiRJkiRJkiRJ//QN4bYU4BxZuY4AAAAASUVORK5CYII=" alt="right-angle"></a>
+        <h2 class="text-red bg-yellow">Id</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, dignissimos.</p>
+        <h2 class="text-red" style="background-color: gray;">Class</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nisi maiores architecto itaque ipsa quam. Vero similique, explicabo atque, voluptas dolore molestias quidem ipsa hic ea, harum officiis autem?</p>
+        <h3 class="text-red bg-aqua">Heading</h3>
+
+
+        <p dir="rtl">اربك تكست هو اول موقع يسمح لزواره الكرام بتحويل الكتابة العربي الى كتابة مفهومة من قبل اغلب برامج التصميم مثل الفوتوشوب و الافترايفكتس و البريمير و الافد ميدا كومبوزر و السموك و برامج اخرى كثيرة</p>
+
+        <button tabindex="3">Button 1</button>
+        <button tabindex="2">Button 2</button>
+        <button tabindex="-1">Button 3</button>
+        
+        <div data-user-id="xx34765">User</div>
+
+        <h2>Access Key</h2>
+        <button accesskey="k">Focus this button by pressing <kbd>alt + k</kbd></button>
+        
+        <h2>Hidden</h2>
+        <div hidden aria-hidden="true">This is a hidden element</div>
+    
+        <section contenteditable>
+            <h2>Content Editable</h2>
+            <p>This is a paragraph</p>
+        </section>
+
+        <h2>Dragable</h2>
+        <img src="https://www.drupal.org/files/project-images/classic_example_0.png" width="300" alt="">
+
+        <form action="">
+            <div>
+            <label for="fname">First Name :</label>
+            <input type="text" name="firstname" id="fname" required aria-required="true">
+            </div>
+            <div>
+            <label for="lname">Last Name :</label>
+            <input type="text" name="lastname" id="lname">
+            </div>
+            <div>
+            <label for="dob">DOB :</label>
+            <input type="date" name="dob" id="dob">
+            </div>
+            <div>
+            <label for="email">Email Id :</label>
+            <input type="email" name="email" id="email" required aria-required="true">
+            </div>
+            <div>
+            <label for="mob">Mobile No :</label>
+            <input type="number" name="mob" id="mob">
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+        </form>
+    </main>
+</body>
+</html>

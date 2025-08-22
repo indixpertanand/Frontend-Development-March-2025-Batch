@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frontend - HTML Image, List & Table</title>
+    </head>
+    <body>
+        <header>
+            <h1>HTML Image, List & Table</h1>
+        </header>
+        <main>
+            <section>
+                
+            <h2>Images</h2>
+            <h3>Absolute path</h3>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="single fresh red strawberry on table green background food fruit sweet macro juicy plant image photo">
+            <h3>Relative Path</h3>
+            <img width="600" src="./assets/images/free-nature-images.jpg" alt="image of a tree in green landscape and blue sky above">
+
+            <h3>Responsive Image</h3>
+            <picture>
+                <source media="(min-width: 1200px)" srcset="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/396e9/MainBefore.jpg">
+                <source media="(min-width: 768px)" srcset="./assets/images/free-nature-images.jpg">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" alt="single fresh red strawberry on table green background food fruit sweet macro juicy plant image photo" width="600" height="350">
+            </picture>
+
+
+            <h3>Figure</h3>
+            <figure>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg" width="500" alt="single fresh red strawberry on table with green background">
+                <figcaption>Single fresh red strawberry on table with green background.</figcaption>
+            </figure>
+
+            </section>
+            <section>
+                <h2>HTML Table</h2>
+                <table border>
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Employee Name</th>
+                            <th>Designation</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sohan</td>
+                            <td>Sr. Web Developer</td>
+                            <td>60,000</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Mohan</td>
+                            <td>Sr. HR</td>
+                            <td>40,000</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>Geeta</td>
+                            <td rowspan="2">Manager</td>
+                            <td>80,000</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Manoneet </td>
+                            <td>80,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><strong>Total</strong></td>
+                            <td>1,80,000</td>
+                        </tr>
+                    </tfoot>
+                    <caption>Employee Table</caption>
+                </table>
+            </section>
+            <section>
+                <h2>HTML List</h2>
+                <h3>Unordered List</h3>
+                <ul type="circle">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.
+                        <ul type="none">
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Quis qui provident eius asperiores.</li>
+                            <li>Dolorem quo molestiae illum nemo!</li>
+                            <li>Porro culpa ducimus earum expedita?</li>
+                            <li>Quidem provident magni ex temporibus?</li>
+                        </ul>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.
+                        <ol>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <li>Ab veritatis sed nobis?</li>
+                            <li>Optio quia officia doloribus.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Corporis culpa illum ipsam ad.
+                        <ol>
+                            <li>Lorem, ipsum dolor.</li>
+                            <li>Provident, placeat voluptatem!</li>
+                            <li>Asperiores, placeat! Fugiat?</li>
+                            <li>Harum, rem possimus.</li>
+                        </ol>
+                    </li>
+                    <li>Dolorem, voluptas cumque! Eum, mollitia.</li>
+                    <li>Ducimus dolorum aperiam reprehenderit quas.</li>
+                </ol>
+                <h3>Dictionary List</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>HTML is a markup language Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dicta molestias ratione saepe ducimus repellat eligendi repudiandae, illo laudantium accusamus voluptatum vero, iste iure dolorem ab cum magnam commodi doloribus eos molestiae ut laborum asperiores nisi provident. Odio quisquam repellendus sunt, nihil ipsum cum nostrum, similique iusto fugiat, harum soluta.</dd>
+                    <dt>CSS</dt>
+                    <dd>CSS is an styling language used to style html page</dd>
+                    <dt>JS</dt>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                    <dt>JS</dt>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                    <dt>JS</dt>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                    <dt>JS</dt>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                    <dt>JS</dt>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                    <dt>JS</dt>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                    <dt>JS</dt>
+                    <dd>JS is an scripting language used to add functionality and intractivity in html page</dd>
+                </dl>
+            </section>
+        </main>
+    </body>
+</html>
