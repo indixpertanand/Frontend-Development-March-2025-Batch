@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size, Units & Images</title>
+    <style>
+        *{
+            margin: 0
+        }
+        .px{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .cm{
+           width: 10cm;
+            height: 10cm;
+            background-color: blue; 
+        }
+        .pt{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        /* Relative Units */
+        .rem{
+            width: 10rem;
+            height: 10rem;
+            background-color: blueviolet;
+        }
+        .em{
+            font-size: 10px;
+            width: 10em;
+            height: 10em;
+            background-color: aquamarine;
+        }
+        main{
+            font-size: 20px;
+        }
+        .vw{
+             width: 10vw;
+            height: 10vw;
+            background: black;
+        }
+        .vh{
+            width: 10vh;
+            height: 10vh;
+            background: yellowgreen;  
+        }
+        .container{
+            height: 400px;
+        }
+        .percentage{
+            width: 40%;
+            height: 50%;
+            background-color: brown;
+        }
+        .auto{
+            width: auto;
+            height: 300px;
+            
+            background-color:red;
+        }  
+        
+        .div{
+            margin-bottom: 1rem;
+        }
+
+        .max-content{
+            width: max-content;
+            background-color: aqua;
+        }
+        .min-content{
+            width: min-content;
+            background-color: rgb(3, 82, 82);
+        }
+        .fit-content{
+            width: fit-content;
+            background-color: rgb(36, 3, 82);
+        }
+        /* Images*/
+        .img-responsive{
+            max-width: 100%;
+        }
+        .images{
+            width: calc(33% - 4px);
+            display: inline-block;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+        .square{
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+        .rounded{
+            border-radius: 10px;
+        }
+
+        .object-fit-fill{
+            object-fit: fill;
+        }
+        .object-fit-cover{
+            object-fit: cover;
+        }
+        .object-fit-contain{
+            object-fit: contain;
+        }
+
+        .img-thumbnail{
+            border: 2px solid #000;
+            padding: 10px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Size, Units & Images</h1>
+        <h2>Units</h2>
+        <h3>Absolute Units</h3>
+        <div class="px"></div>
+        <div class="cm"></div>
+        <div class="pt"></div>
+
+        <h3>Relative</h3>
+        <div class="rem"></div>
+        <div class="em"></div>
+        <div class="vw"></div>
+        <div class="vh"></div>
+        <div class="container">
+            <div class="percentage"></div>
+        </div>
+
+        <div class="auto"></div>
+        <div class="div max-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, eveniet nam. Dolor inventore repellendus, officiis, unde soluta velit enim molestiae Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, in!
+        </div>
+        <div class="div min-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </div>
+        <div class="div fit-content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos repellat aliquam natus beatae  
+        </div>
+
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, saepe.
+        <br>
+        <div class="images">
+            <img class="img-responsive" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+            
+        </div>
+        <div class="images">
+            <img class="img-responsive" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+            
+        </div>
+        <div class="images">
+            <img class="img-responsive rounded" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+            
+        </div>
+        <div class="images">
+            <img class="img-responsive square circle" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+            
+        </div>
+        <div class="images">
+            <img class="img-responsive square circle object-fit-fill" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+            
+        </div>
+        <div class="images">
+            <img class="img-responsive square circle object-fit-cover" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+            
+        </div>
+        <div class="images">
+            <img class="img-responsive square object-fit-contain" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+        </div>
+        <div class="images">
+            <img class="img-responsive img-thumbnail rounded" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="">
+        </div>
+    </main>
+</body>
+</html>

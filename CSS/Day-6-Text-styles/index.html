@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Styles</title>
+    <style>
+        body{
+            margin-bottom: 10rem;
+        }
+        *{
+            text-align: left;
+        }
+
+        p{
+            text-align: justify;
+        }
+
+        a{
+            text-decoration-line:underline;
+            text-decoration-style:wavy;
+            text-decoration-color: brown;
+            text-decoration-thickness: 5px;
+            color: currentColor;
+        }
+
+        a:hover{
+            color: red;
+        }
+        a:focus{
+            outline: 1px solid green;
+            color: green;
+        }
+
+        a:visited{
+            color: red;
+        }
+
+        h1, h2, h3, h4, h5, h6{
+            text-transform: capitalize;
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        h2{
+            letter-spacing: 1.5px;
+            word-spacing: 10px;
+        }
+        .ws-nowrap{
+            white-space: wrap;
+        }
+        h3{
+            text-shadow: 4px 2px 2px red;
+        }
+
+        p:hover{
+            color: red;
+        }
+
+        p:nth-child(3){
+            color: yellow;
+        }
+        p:first-child{
+            color: greenyellow;
+        }
+        li{
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+        li:first-child{
+            margin-top: 0;
+        }
+        li:last-child{
+            padding-bottom: 0;
+        }
+
+        li:nth-child(even){
+            color: blue;
+        }
+        li:nth-child(odd){
+            color: red;
+        }
+
+        p:nth-of-type(2){
+            background-color: aqua;
+        }
+
+        form input:required{
+            border-color: yellow
+        }
+        form input:valid{
+            border-color: green
+        }
+        form input:invalid{
+            border-color: red
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>CSS text styles</h1>
+        <h2>Secondary Heading</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam dolore est corrupti tempora quae, voluptatibus nobis iste suscipit, possimus nostrum neque fuga inventore cumque exercitationem numquam similique quidem itaque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit necessitatibus quisquam doloremque veniam ex, molestiae enim, eius repellat praesentium vero, nemo quasi. Earum aspernatur saepe aliquid reprehenderit illo alias repellendus totam. Perspiciatis est omnis officia suscipit itaque, maxime explicabo consequuntur quae nostrum eum non at quod voluptatum magni vel corrupti sed eveniet cum odit quas magnam officiis molestiae. Enim corrupti repudiandae distinctio repellendus corporis veritatis. Vitae sapiente assumenda officiis vel quia. Vel hic vero consequuntur rerum quae! Quisquam, rem tempore?
+        </p>
+        <div>
+            <h3>Tertiary Heading</h3>
+            <p class="ws-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, libero! Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sed nemo facilis nulla repellat numquam dolore saepe earum deleniti neque, esse tenetur! Quia quod dolores ipsam repellat explicabo. Earum, molestias.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nemo!</li>
+                <li>Quam quo necessitatibus sint sunt dolores ut magni quasi nihil.</li>
+                <li>Odio inventore cumque iste ipsa similique, dolor at minima illum.</li>
+                <li>Distinctio repellat fugiat aliquam debitis suscipit inventore nesciunt ex tenetur.</li>
+                <li>Eos ullam nulla tempora accusamus aliquam aliquid earum tenetur deleniti.</li>
+            </ul>
+        </div>
+        <a href="#">Google</a>
+
+        <form action="">
+            <input type="text" required>
+            <input type="number" max="20">
+            <input type="email">
+
+        </form>
+    </main>
+</body>
+</html>

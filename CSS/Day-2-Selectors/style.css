@@ -1,0 +1,86 @@
+*{
+    margin-top: 0;
+    color: rgb(111, 111, 110);
+}
+
+p{
+   color: green; 
+}
+
+h2{
+    color: blue;
+}
+
+
+#main-heading, .text-red{
+    color: red;
+}
+
+#important-heading{
+    color: purple;
+}
+
+.bg-yellow{
+    background-color: yellowgreen;
+}
+.text-black{
+    color: black
+}
+
+
+/* Attribute Selector */
+
+[data-count]{
+    font-size: 30px
+}
+
+[class^="bg"]{
+    text-decoration: underline;
+}
+
+[data-count="30"]{
+    color: sienna;
+}
+[class="bg-yellow"]{
+    text-decoration: overline;
+}
+
+img{
+    padding: 10px;
+}
+
+img[src$=".webp"]{
+    background: lightgreen;
+}
+img[src$=".svg"]{
+    background: lightsalmon;
+}
+
+[class*="text"]{
+    text-decoration: line-through;
+}
+
+
+.bg-green{
+    background-color: green;
+}
+
+.bg-green p, .bg-green h3{
+    color: white;
+}
+
+.bg-green > p{
+    background-color: blueviolet;
+}
+
+.bg-green h2 + p{
+    background-color: brown;
+}
+
+
+
+.bg-green h2 ~ p{
+    font-weight: 700;
+}
+
+/* this is a comment */

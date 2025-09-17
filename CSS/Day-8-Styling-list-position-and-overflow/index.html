@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling list position and overflow</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        ul{
+            list-style-type: square;
+            /* list-style-position: inside; */
+            /* padding-left: 1rem; */
+            list-style-image: url('./images/de94180f9ae6fa8828d9e712b4ee5a1d.jpg');
+        }
+        .list-unstyled{
+            list-style: none;
+            padding-left: 0;
+        }
+        .list-unstyled li::before{
+            content: '';
+            display: inline-block;
+            width: 10px;
+            aspect-ratio: 1/1;
+            background: url('./images/de94180f9ae6fa8828d9e712b4ee5a1d.jpg') center/cover no-repeat;
+            border-radius: 50%;
+            list-style-position: outside;
+            /* margin-right: 10px; */
+            /* top: 15px; */
+            position: absolute;
+            left: 0;
+            top: .3em
+        }
+        .list-unstyled li{
+            padding-left: 20px;position: relative;
+            margin-bottom: 15px;
+        }
+        /* .list-unstyled li::after{
+            content: ' After'
+        } */
+         .div{
+            /* margin-top: 40px; */
+            padding: 20px;
+            background: #e0e0e0;
+            /* position: relative; */
+            /* position: fixed; */
+            position: sticky;
+            top: 20px;
+            left: 0;
+            /* right: 0 */
+            width: 100%;
+         }
+         .div p{
+            position: absolute;
+            top: auto;
+            bottom: 0
+         }
+         body{
+            padding-bottom: 100vh;
+         }
+         main{
+            padding-top: 100px;
+         }
+
+         .position-relative{
+            position: relative;
+            width: 200px;
+            aspect-ratio: 1/1;
+            background-color: #000;
+         }
+         .position-absolute{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: -2px 2px 2px rgba(0,0,0,.25);
+         }
+
+         .bg-red{
+            background: red;
+            color: #fff;
+         }
+
+         .bg-green{
+            background: green;
+            color: #fff;
+            margin-left: 20px;
+            z-index: 4;
+         }
+         .bg-yellow{
+            background: yellow;
+            color: #000;
+            margin-left: 40px
+         }
+         .bg-aqua{
+            background: aqua;
+            color: #000;
+            margin-left: 60px;
+            z-index: -1;
+            margin-top: 40px
+         }
+
+         .overflow{
+            width: 200px;
+            margin-top: 200px;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            height: 200px;
+            /* overflow: visible; */
+            /* overflow: hidden; */
+            /* overflow-y: scroll; */
+            overflow: auto
+         }
+    </style>
+</head>
+<body>
+    <main>
+
+        <div class="div">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h2>heading</h2>
+            <span>Inline elements</span>
+        </div>
+        <ul type="circle">
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, quo?</li>
+            <li>Veritatis beatae pariatur deserunt laboriosam. Quo rerum adipisci quam repudiandae!</li>
+            <li>Numquam labore sequi nobis tenetur laboriosam sed perferendis adipisci itaque.</li>
+            <li>Deserunt dolor eveniet, eos minima at nisi voluptatibus quod esse.</li>
+            <li>Maiores a adipisci consectetur atque fuga expedita vitae, dolores enim!</li>
+        </ul>
+        <ul class="list-unstyled">
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, quo?</li>
+            <li>Veritatis beatae pariatur deserunt laboriosam. Quo rerum adipisci quam repudiandae!</li>
+            <li>Numquam labore sequi nobis tenetur laboriosam sed perferendis adipisci itaque.</li>
+            <li>Deserunt dolor eveniet, eos minima at nisi voluptatibus quod esse.</li>
+            <li>Maiores a adipisci consectetur atque fuga expedita vitae, dolores enim!</li>
+        </ul>
+
+        <div class="position-relative">
+            <div class="position-absolute bg-red">layer 1</div>
+            <div class="position-absolute bg-green">layer 2</div>
+            <div class="position-absolute bg-yellow">layer 3</div>
+            <div class="position-absolute bg-aqua">layer 4</div>
+        </div>
+        <div class="overflow">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto hic veniam possimus in molestias nesciunt sit, ab eum maxime quaerat excepturi at quasi illum cumque ad odit natus, id magni, quia accusamus ex inventore. Quas harum quisquam aliquid eius molestias minus optio ipsam, iure eligendi eos totam esse! Quae laboriosam enim quisquam explicabo repellat. Dicta eius aliquam saepe quia odio dignissimos dolores! Ad quis saepe expedita quibusdam, laboriosam dolorem praesentium quod voluptatem, explicabo doloremque nemo. Nulla recusandae ut, laboriosam sequi porro, beatae neque culpa dicta non aliquid earum quas tempora magnam doloremque fuga perspiciatis ea? Quas dicta numquam recusandae non!
+        </div>
+        <div class="overflow">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto hic veniam possimus.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque a quia nam veniam sed, maxime quidem commodi, aliquid ad impedit nisi pariatur aut eius inventore ratione beatae accusantium vitae! Provident deleniti ea similique repudiandae quia, sint beatae aliquam animi repellendus magnam doloremque, incidunt cupiditate soluta hic magni eius fuga ratione.
+        </div>
+    </main>
+</body>
+</html>

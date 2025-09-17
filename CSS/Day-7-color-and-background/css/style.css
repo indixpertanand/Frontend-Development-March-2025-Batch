@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Named colors */
+
+h2{
+    color:wheat
+}
+
+.hex-color{
+    color: #b7f10988;
+}
+
+.rgb-color{
+    color: rgb(255, 0, 0);
+}
+.rgba-color{
+    color: rgba(255, 0, 0, .5);
+}
+
+.hsl-color{
+    color: hsla(0, 25%, 45%, .5);
+}
+
+.bg-black{
+    background-color: black;
+    color: #fff;
+}
+body{
+    min-height: 200vh;
+    padding-bottom: 10rem;
+}
+.container-top, .bg-gradient, .bg-gradient-radial{
+    height: 200px
+}
+.bg-image{
+    color: #fff;
+    /* background-color: #000;
+    background-image: url('https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg');
+    background-size: 100px;
+    background-position: top;
+    background-attachment:fixed;
+    background-repeat: no-repeat; */
+    background-image:
+    url('https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg'), 
+    url('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg');
+    background-size: 200px, contain;
+    background-repeat: no-repeat;
+    background-position: center, top;
+
+
+}
+
+.bg-gradient{
+    background-image: linear-gradient(to left, red 40%, green 40% 70%, blue 70%);
+    background-size: 200px;
+    background-repeat: no-repeat;
+}
+.bg-gradient-radial{
+    background-image: radial-gradient(circle at right, red 40%, transparent 20%),
+    url('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg');
+    background-size: cover
+}
+
+.bg-gradient-conic{
+    padding: 20px;
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: conic-gradient(from 40deg, red 33.33%, green 33.33% 66.66%, blue 66.66%);
+}
+
+.bg-text{
+    background: #ccc;
+    width: 200px;
+    padding: 40px;
+    margin: 20px;
+    border: 3px solid red;
+    border-color: green
+}
+
+.bg-text-2{
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    /* padding-block: 20px */
+    padding-inline:  20px 30px;
+    margin-block: 40px;
+    border: 3px solid red;
+    border-color: green
+}
+
