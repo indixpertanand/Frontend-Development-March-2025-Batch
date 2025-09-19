@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 70px 500px 70px;
+            grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer"
+            ;
+        }
+        header{
+            border-bottom: 1px solid #e0e0e0;
+            grid-area: header;
+        }
+        .sidebar{
+            background: #000;
+            grid-area: sidebar;
+        }
+        main{
+            grid-area: main;
+            border: 1px solid #ccc;
+            display: grid;
+            /* align-items: center;
+            justify-items: center; */
+            place-items: center;
+        }
+        footer{
+            grid-area: footer;
+            border: 1px solid #ccc
+        }
+        .card{
+            max-width: 300px;
+            display: grid;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card-body{
+            padding: 1rem;
+            background: rgba(255,255,255,.3);
+        }
+        .card>*{
+            grid-area: 1/1;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <nav class="sidebar"></nav>
+    <main>
+        <div class="card">
+            <img src="./images/bg-image.png" alt="sunrise">
+            <div class="card-body">
+                <h3>Card Heading</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sapiente officia eos, quibusdam tempore ad similique soluta labore libero rem!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa harum explicabo sit nobis officiis ad doloremque ipsum eius alias. Vitae sequi nemo veritatis harum aut voluptatibus architecto tenetur perspiciatis culpa error deleniti officiis magnam esse doloremque pariatur illum, dicta accusantium. Quis, sapiente. Quidem, reiciendis eius sed laborum non similique!
+                </p>
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
