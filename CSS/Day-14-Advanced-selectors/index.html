@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors</title>
+    <style>
+        /* p:hover{
+            color: red;
+        }
+        main:hover p:not(:hover){
+            color: blue;
+        } */
+        .togglecontent:not(.show){
+            display: none;
+        }
+        .d-flex{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .news-thumb{
+            width: 30%;
+            flex-grow: 1;            
+            flex-basis: 250px;
+        }
+         .news-thumb h6{
+            margin-bottom: 0;
+            font-size: 1.3rem;
+            margin-top: .5rem;
+         }
+
+        .news-thumb:not(:has(>img)){
+            background: blue;
+            padding: 1.5rem;
+            color: white;    
+        }
+        .news-thumb:not(:has(>img)) h6{
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+        .img-fluid{
+            max-width: 100%;
+            height: auto;
+        }
+
+        :where(.togglecontent, .news-thumb .date) span{
+          color: red;
+        }
+
+        .news-thumb span{
+            color: blue;
+        }
+
+        .image1{
+            mask-image: url('./logo.svg');
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+        .image2{
+            mask-image: linear-gradient(to right, red 50%, #f000 50%), linear-gradient( red 50%, #f000 50%);
+            /* mask-repeat: no-repeat; */
+            mask-size: 2px 100%, 100% 2px ;
+            mask-position: center; 
+            mask-mode: alpha
+        }
+        .image3{
+            mask-image: 
+            conic-gradient(red 25%, #f000 25% 50%,  red 50% 75%, #f000 75%),
+            linear-gradient(-135deg, transparent 45%, red 45% 55%, #f000 55%),
+            linear-gradient(135deg, transparent 45%, red 45% 55%, #f000 55%);
+            /* mask-repeat: no-repeat; */
+            mask-size: 50px 50px;
+            mask-position: center; 
+            mask-mode: alpha;
+            mask-composite: exclude;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ipsum?</p>
+        <p>Eligendi commodi molestias magni vitae facere, dolorum perferendis. Asperiores, possimus.</p>
+        <p>Fugit, ab impedit perferendis accusantium odio ullam eos eveniet natus.</p>
+        <p>Doloremque dolorem nulla, porro officiis cumque corporis incidunt distinctio maxime.</p>
+        
+        <button>Button</button>
+        <div class="togglecontent show">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ad? Corrupti minima, laboriosam natus mollitia iusto odio facilis quo qui labore perspiciatis architecto alias laborum, fugiat ex reprehenderit sit nihil repellat autem nesciunt facere amet recusandae. Nisi quidem necessitatibus odit?</span>
+        </div>
+
+
+        <div class="d-flex">
+            <div class="news-thumb ">
+                <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" class="img-fluid" alt="">
+                <div class="news-detail">
+                    <div class="date"><span>25 Sep, 2025</span></div>
+                    <h6>Lorem, ipsum dolor sit amet consectetur adipisicing.</h6>
+                    <a href="#"><img /></a>
+                </div>
+
+            </div>
+            <div class="news-thumb">                
+                <div class="news-detail">
+                    <div class="date">25 Sep, 2025</div>
+                    <h6>Lorem, ipsum dolor sit amet consectetur adipisicing.</h6>
+                    <a href="#"><img /></a>
+                </div>
+            </div>
+            <div class="news-thumb">
+                <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" class="img-fluid" alt="">
+                <div class="news-detail">
+                    <div class="date">25 Sep, 2025</div>
+                    <h6>Lorem, ipsum dolor sit amet consectetur adipisicing.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="mask-container d-flex">
+            <div class="image1">
+                <img width="250" src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" class="img-fluid" alt="">
+            </div>
+            <div class="image2">
+                <img width="250" src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" class="img-fluid" alt="">
+            </div>
+            <div class="image3">
+                <img width="250" src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" class="img-fluid" alt="">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

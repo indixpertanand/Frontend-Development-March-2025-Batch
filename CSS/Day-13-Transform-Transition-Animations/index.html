@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Transition Animations</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding-bottom: 3rem;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #f005;
+            margin-top: 20px;
+            margin-inline: auto
+        }
+        .box-1{
+            transform: translate(10px, 20px);
+            /* transform: translateX(10);
+            transform: translateY(20px); */
+        }
+        .box-2{
+            /* transform: scale(1.2); */
+            transform: scaleX(.8);
+            /* display: inline-block; */
+        }
+
+        .box-3{
+            transform: rotate(45deg);
+        }
+        .box-3 span{
+            transform: rotate(-45deg);
+        }
+        .box-6{
+            transform-origin: bottom right;
+        }
+        .box-4{
+            transform: skew(10deg)
+        }
+
+        .box-5{
+            /* transform: translate(20px) rotate(20deg) scale(1.3); */
+            translate: 20px;
+            rotate: 20deg;
+            scale: 1.3;
+            transition: all .3s;
+        }
+        .box-5:hover{
+            /* transform: rotate(0) */
+            rotate: 0deg;
+            scale: 1;
+        }
+        /* main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+
+        .animation-box{
+            width: 50%;
+            height: 250px;
+            border: 2px solid blue;
+            margin-inline: auto;
+            position: relative;
+        }
+        .animation-box .box{
+            position: absolute;
+            margin-top: 0;
+            left: 0;
+            top: 0;
+            /* animation-name: movebox;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-fill-mode: both; */
+            animation: movebox 3s 1s linear infinite;
+            animation-fill-mode: forwards;
+        }
+        .animation-box:hover .box{            
+            /* animation-fill-mode: forwards; */
+        }
+
+        @keyframes movebox{
+            0%{
+                left: 0;
+                top: 0;
+                background: #f005;
+                border-radius: 0;
+            }
+            30%{
+                top: 0;
+                left: calc(100% - 100px);
+                background: rgba(13, 180, 4, 0.333);                
+                border-radius: 20%;
+            }
+            50%{
+                top:  calc(100% - 100px);
+                left: calc(100% - 100px);                
+                background: rgba(233, 242, 107, 0.333);
+                
+                border-radius: 50%;
+            }
+            80%{
+                top:  calc(100% - 100px);
+                left: 0;                
+                background: rgba(20, 5, 230, 0.333);                
+                border-radius: 20%;
+            }
+            100%{
+                top:  0;               
+                border-radius: 0;
+                background: rgba(237, 5, 225, 0.333);
+            }
+        }
+        a{
+            transition: .5s all;
+            /* font-size: max(calc(1rem + 2.5vw), 50px); */
+            font-size: clamp(40px, calc(1rem + 2.5vw), 100px);
+        }
+        a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box box-1">
+
+        </div>
+        <div class="box box-2">
+
+        </div>
+        <div class="box box-3">
+            <span>45</span>
+        </div>
+        <div class="box box-3 box-6">
+            <span>45</span>
+        </div>
+        <div class="box box-4">
+
+        </div>
+        <div class="box box-5">
+
+        </div>
+
+        <div class="animation-box">
+            <div class="box"></div>
+        </div>
+
+        <a href="#">Link to google</a>
+
+
+    </main>
+</body>
+</html>

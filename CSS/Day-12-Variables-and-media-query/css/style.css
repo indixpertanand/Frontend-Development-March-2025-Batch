@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: green;
+    --primary-color-text: white;
+    --secondary-color: blue;
+    --secondary-color-text: white;
+    --body-color: #363535;
+    --body-bg: #f6e9dd;
+    --link-color:#202020;
+
+    --btn-padding-y: .5rem;
+    --btn-padding-x: 1rem;
+    --btn-font-size: 1rem;
+    --btn-border-radius: .3rem;
+}
+
+body{
+    color: var(--body-color);
+    background: var(--body-bg);
+}
+
+.nav-link{
+    color: var(--link-color);
+
+}
+.nav-link:hover{
+   color: var(--link-hover-color, blue); 
+}
+
+button, .btn{
+    padding: var(--btn-padding-y, .4rem) var(--btn-padding-x, 1rem);
+    font-size: var(--btn-font-size, 1rem);
+    border-radius: var(--btn-border-radius);
+    border: 1px solid var(--btn-border-color, rgb(201, 201, 201));
+    background-color: var(--btn-bg-color, rgb(201, 201, 201));
+    color: var(--btn-color, #202020);
+}
+
+.btn-primary{
+    --btn-border-color: var(--primary-color, blue);
+    --btn-color: var(--primary-color-text, #fff);
+    --btn-bg-color: var(--primary-color)
+}
+.btn-outlined-primary{
+    --btn-border-color: var(--primary-color, blue);
+    --btn-color: var(--primary-color, blue);
+    --btn-bg-color: transparent
+}
+
+@media (max-width: 992px){
+    h1{
+        font-size: 1.5em;
+    }
+}
