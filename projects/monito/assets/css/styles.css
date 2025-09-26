@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Gilroy-Reg';
+    src: url('../fonts/Gilroy-Regular.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/Gilroy-Medium.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../fonts/Gilroy-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.ttf');
+}
+@font-face {
+    font-family: 'Gilroy-xBold';
+    src: url('../fonts/Gilroy-ExtraBold.ttf');
+}
+
+
+:root{
+
+    /* Theme Colors */
+    --primary-color: #003459;
+    --primary-800: #00528C;
+    --primary-600: #0078CD;
+    --primary-dark: #002A48;
+    --primary-accent-color: #fff;
+
+    --secondary-color: #F7DBA7;
+    --secondary-800: #F1D092;
+    --secondary-600: #FCEED5;
+    --secondary-dark: #EEC77E;
+    --secondary-accent-color: #242B33;
+
+
+    --nutral-100: #00171F;
+    --nutral-80: #242B33;
+    --nutral-60: #667479;
+    --nutral-40: #99A2A5;
+    --nutral-20: #CCD1D2;
+    --nutral-10: #EBEEEF;
+    --nutral-0: #fdfdfd;
+    
+
+    /* Element Color */
+    --body-color: var(--nutral-80);
+    --body-bg: var(--nutral-0);
+    --heading-color: var(--primary-dark, #002A48);
+    --nav-link-color: var(--primary-dark, #002A48);
+
+    
+    /* Font family */
+    --font-family-base: 'Gilroy-Reg', sans-serif;
+    --font-family-heading: 'Gilroy-Bold', sans-serif;
+    --font-family-xheading: 'Gilroy-xBold', sans-serif;
+
+    --display-1: 60px;
+    --display-2: 52px;
+
+    --h1-font: 46px;
+    --h2-font: 36px;
+    --h3-font: 28px;
+    --h3-font: 24px;
+
+    --heading-1-bold:  700 var(--h1-font)/1.35 'Gilroy-Bold', sans-serif;
+    --heading-1-med:  500 var(--h1-font)/1.35 'Gilroy-Medium', sans-serif;
+    --heading-1-reg:  400 var(--h1-font)/1.35 'Gilroy-Reg', sans-serif;
+
+    --heading-2-bold:  700 var(--h2-font)/1.4 'Gilroy-Bold', sans-serif;
+    --heading-2-med:  500 var(--h2-font)/1.4 'Gilroy-Medium', sans-serif;
+    --heading-2-reg:  400 var(--h2-font)/1.4 'Gilroy-Reg', sans-serif;
+    
+    --heading-3-bold:  700 var(--h3-font)/1.4 'Gilroy-Bold', sans-serif;
+    --heading-3-med:  500 var(--h3-font)/1.4 'Gilroy-Medium', sans-serif;
+    --heading-3-reg:  400 var(--h3-font)/1.4 'Gilroy-Reg', sans-serif;
+    
+    --heading-4-bold:  700 var(--h4-font)/1.4 'Gilroy-Bold', sans-serif;
+    --heading-4-med:  500 var(--h4-font)/1.4 'Gilroy-Medium', sans-serif;
+    --heading-4-reg:  400 var(--h4-font)/1.4 'Gilroy-Reg', sans-serif;
+
+
+    --fs-20: 20px;
+    --fs-16: 16px;
+    --fs-14: 14px;
+    --fs-12: 12px;
+    --fs-10: 10px;
+    --fs-8: 8px;
+
+    /* Buttons */
+    --btn-font-size-base: 14px;
+    --btn-font-size-lg: 16px;
+    --btn-font-size-sm: 12px;
+
+    --btn-padding-block: .83em;
+    --btn-padding-inline: 2.25em;
+
+    --btn-border-radius: 2.25em;
+
+
+}
+
+
+body{
+    font-size: var(--fs-14);
+    color: var(--body-color);
+    background-color: var(--body-bg);
+    scroll-behavior: smooth;
+    font-family: var(--font-family-base);
+}
+
+/* Reboot */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    transition: .4s all;
+}
+
+button{
+    background-color: transparent;
+}
+
+ul, ol{
+    list-style: none;
+    padding-left: 0
+}
+li:not(:last-child){
+    margin-bottom: 1rem;
+}
+p:not(:last-child){
+    margin-bottom: .83rem;
+}
+
+
+
+
+
+/* ================= Typography ===================== */
+.display-1{
+    font: 900 var(--display-1)/1 var(--font-family-xheading);
+}
+.display-2{
+    font: 900 var(--display-2)/1 var(--font-family-xheading);
+}
+
+h1, .h1{
+    font: var(--heading-1-bold);
+    color: var(--heading-color);
+}
+
+h2, .h2{
+    font: var(--heading-2-bold);
+    color: var(--heading-color);
+}
+
+h3, .h3{
+    font: var(--heading-3-bold);
+    color: var(--heading-color);
+}
+
+h4, .h4{
+    font: var(--heading-4-bold);
+    color: var(--heading-color);
+}
+
+h5, h6{    
+    color: var(--heading-color);
+}
+
+.fs-20{
+    font-size: var(--fs-20);
+}
+.fs-16{
+    font-size: var(--fs-16);
+}
+.fs-14{
+    font-size: var(--fs-14);
+}
+.fs-12{
+    font-size: var(--fs-12);
+}
+.fs-10{
+    font-size: var(--fs-10);
+}
+.fs-8{
+    font-size: var(--fs-8);
+}
+
+/* ========================= Buttons ====================== */
+.btn{
+    --btn-font: var(--btn-font-size-base);
+    font-size: var(--btn-font);
+    display: inline-block;
+    line-height: 1;
+    border: 1px solid var(--btn-border-color, var(--primary-color));
+    background: var(--btn-bg, var(--primary-color));
+    color: var(--btn-color, var(--primary-accent-color));
+    padding: var(--btn-padding-block) var(--btn-padding-inline);
+    border-radius: var(--btn-border-radius, .25em);
+}
+
+.btn-primary-outline{
+    --btn-border-color: var(--primary-dark);
+    --btn-color: var(--primary-dark);
+    --btn-bg: transparent;
+}
+.btn-primary-outline:hover{
+    --btn-color: var(--primary-accent-color);
+    --btn-bg: var(--primary-dark);
+}
+
+.btn-lg{
+   --btn-font: var(--btn-font-size-lg) 
+}
+.btn-sm{
+   --btn-font: var(--btn-font-size-sm) 
+}
+
+/* ========================= Backgrounds ====================== */
+
+/* ========================= text-color ====================== */
+
+/* ========================= Section Headings ====================== */
+
