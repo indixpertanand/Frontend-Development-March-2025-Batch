@@ -53,6 +53,7 @@
 
     
     /* Font family */
+    --font-family-medium: 'Gilroy-Medium', sans-serif;
     --font-family-base: 'Gilroy-Reg', sans-serif;
     --font-family-heading: 'Gilroy-Bold', sans-serif;
     --font-family-xheading: 'Gilroy-xBold', sans-serif;
@@ -63,7 +64,7 @@
     --h1-font: 46px;
     --h2-font: 36px;
     --h3-font: 28px;
-    --h3-font: 24px;
+    --h4-font: 24px;
 
     --heading-1-bold:  700 var(--h1-font)/1.35 'Gilroy-Bold', sans-serif;
     --heading-1-med:  500 var(--h1-font)/1.35 'Gilroy-Medium', sans-serif;
@@ -118,6 +119,7 @@ body{
     background-color: var(--body-bg);
     scroll-behavior: smooth;
     font-family: var(--font-family-base);
+    line-height: 1.5;
 }
 
 /* Reboot */
@@ -204,6 +206,7 @@ h5, h6{
 /* ========================= Buttons ====================== */
 .btn{
     --btn-font: var(--btn-font-size-base);
+    font-family: var(--font-family-medium);
     font-size: var(--btn-font);
     display: inline-flex;
     align-items: center;
@@ -286,14 +289,20 @@ h5, h6{
 
 
 /* ========================= Section Headings ====================== */
-
+.pt-60{
+    padding-top: 60px;
+}
 .heading-wrapper{
     margin-bottom: 1.75rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-
+@media (max-width: 768px){
+    .heading-wrapper .btn{
+        display: none;
+    }
+}
 
 /* ========================= Utilities ====================== */
 /* --------------- display ---------------- */
@@ -318,6 +327,17 @@ h5, h6{
 }
 
 
+/* ========================= Images ====================== */
+img{
+    max-width: 100%;
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.text-center{
+    text-align: center;
+}
 
 
 /* Header Styling */
@@ -442,6 +462,7 @@ nav form input:focus{
         box-shadow: var(--shadow);
         padding: 1rem;
         border-radius: var(--fs-14) ;
+        display: none;
     }
     .menubar{
         flex-direction: column;
@@ -457,11 +478,191 @@ nav form input:focus{
 }
 
 
+.decor-rect{
+    width: min(40vw, 635px);
+    display: block;
+    min-width: 500px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    border-radius: min(7vw, 99px);
+    z-index: 0;
+    background-color: var(--secondary-color);
+}
 
-/* Footer */
+/* ========================== Hero Banner ========================= */
+
+.home-top-banner{
+    background:linear-gradient(161deg, var(--secondary-600) 60% , var(--secondary-800) 90% 100%);
+    padding-top: 84px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.home-top-banner :where(.right-panel, .container){
+    position: relative;
+
+}
+
+.home-top-banner .right-panel{
+    isolation: isolate;
+}
+.home-top-banner .container >.decor-rect{
+   rotate: 25deg;
+    left: -29%;
+    top: -110%;
+}
+.home-top-banner .right-panel .decor-rect{
+   z-index: -1;
+}
+.home-top-banner .right-panel .decor-rect:first-child{
+    rotate: 12deg;
+    background: var(--primary-color);
+    top: 34%;
+    left: -30px;
+    
+}
+.home-top-banner .right-panel .decor-rect:nth-child(2) {
+    rotate: 25deg;
+    top: 29%;
+    left: 2%;
+}
+
+
+
+/* .home-top-banner::before, .home-top-banner .right-panel::before */
+
+
+.home-top-banner .left-panel{
+    width: 40%;
+}
+.home-top-banner .left-panel h1{
+    margin-bottom: 1.5rem;
+}
+.home-top-banner .left-panel p{
+    margin-bottom: 2.13rem;
+}
+.home-top-banner .left-panel .btn-group {
+   gap: 1.25rem;
+}
+
+
+@media (max-width: 1399.98px){
+    .home-top-banner .left-panel {
+        width: 43%;
+    }
+    .home-top-banner .right-panel .decor-rect:first-child{
+        rotate: 9deg;
+        background: var(--primary-color);
+        top: 37%;
+        left: -22px;
+    }
+
+    .home-top-banner .right-panel .decor-rect:nth-child(2) {
+       rotate: 20deg;
+        top: 33%;
+        left: 0%;
+    }
+}
+@media (max-width: 1199.98px){
+    
+    .home-top-banner .wrapper{
+        flex-direction: column;
+    }
+    .home-top-banner .left-panel{width: 100%;}
+    .home-top-banner .right-panel .decor-rect:first-child{
+        rotate: 9deg;
+        background: var(--primary-color);
+        top: 37%;
+        left: -22px;
+    }
+
+    .home-top-banner .right-panel .decor-rect:nth-child(2) {
+        rotate: 20deg;
+        top: 31%;
+        left: 1%;
+    }
+}
+
+
+
+/* Pets */
+.pets .wrapper{
+    --cols: 4;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: 20px;
+}
+
+.pets .wrapper .card{
+    padding: .5rem;
+    background: #fff;
+    border-radius: var(--fs-12);
+    box-shadow: var(--shadow);
+}
+.pets .wrapper .card-details{
+    padding: .75rem .5rem
+}
+.pets .wrapper .card img{
+    width: 100%;
+}
+.pets h3{
+    font-size: var(--fs-16);
+    color: var(--nutral-100);
+}
+
+.pets ul{
+    display: flex;
+    --gap: 1.5rem;
+    gap: var(--gap);
+    margin-block: .25rem;
+}
+.pets ul li{
+    font-family: var(--font-family-medium);
+    color: var(--nutral-60);
+    margin-bottom: 0;
+    position: relative;
+}
+.pets ul li strong{
+    font-family: var(--font-family-medium);
+    font-weight: 500;
+}
+.pets ul li:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    left: calc(100% + (var(--gap) / 2));
+    top: 50%;
+    width: .25rem;
+    aspect-ratio: 1/1;
+    background: var(--nutral-60);
+    border-radius: 50%;
+    translate: -50% -50%
+}
+
+.pets .price{
+    font-family: var(--font-family-medium);
+    color: var(--nutral-100);
+}
+
+@media (max-width: 991.98px){
+    .pets .wrapper{
+        --cols: 3;
+    }
+}
+@media (max-width: 767.98px){
+    .pets .wrapper{
+        --cols: 2;
+    }
+}
+@media (max-width: 480px){
+    .pets .wrapper{
+        --cols: 1;
+    }
+}
+
+
+/*========================= Footer ========================== */
 
 footer{
-    background:linear-gradient(161deg, var(--secondary-600) 6% , var(--secondary-800) 75% 82%, var(--secondary-color)100%);
+    background:linear-gradient(161deg, var(--secondary-600) 60% , var(--secondary-800) 90% 100%);
     padding-block: 80px 40px;
     border-radius: 40px 40px 0 0;
 }
@@ -485,3 +686,62 @@ footer .newsletter form{
     gap: .75rem;
 }
 footer .newsletter input{padding: .89rem 1.75rem; border-radius: 8px; border: 1px solid var(--nutral-40); font-size: var(--fs-14);}
+
+footer nav{
+    padding-block: 2.5rem;
+    border-bottom: 1px solid var(--nutral-20)
+}
+footer nav li:not(:last-child){margin-bottom: 0;}
+footer nav ul:first-child{
+    gap: 3.75rem;
+}
+footer nav ul:last-child{
+    gap: 2.5rem;
+}
+footer nav a{
+    color: var(--nutral-100);
+    font-family: var(--font-family-medium);
+}
+footer hr{
+    border-color: var(--nutral-20);
+}
+
+.footer-bottom{margin-top: 2.5rem;}
+.privacy-wrapper{gap: 1.5rem;}
+.privacy-wrapper a, .footer-bottom p{
+    color: var(--nutral-60);
+    font-family: var(--font-family-medium);
+}
+
+ .footer-bottom p{margin-bottom: 0;}
+
+
+@media (max-width: 1399px){
+    footer nav ul:first-child{
+    gap: 2.5rem;
+    }
+    footer nav ul:last-child{
+        gap: 2rem;
+    }
+}
+@media (max-width: 1199.98px){
+    footer nav ul:first-child{
+        gap: 2rem;
+    }
+    footer nav ul:last-child{
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 991.98px){
+    .newsletter{
+        flex-direction: column;
+    }
+    footer .newsletter .text-content, footer .newsletter form{width: 100%;}
+}
+@media (max-width: 767.98px){
+    .footer-bottom{flex-direction: column; gap: 1.5rem;}
+    .footer-bottom p, .footer-bottom .privacy-wrapper{order: 1;}
+    .newsletter form{
+        flex-direction: column;
+    }
+}
