@@ -304,6 +304,13 @@ h5, h6{
     }
 }
 
+.heading-wrapper .heading-label{
+    font-size: var(--fs-16);
+    font-weight: 400;
+    font-family: var(--font-family-base);
+    color: #000;
+}
+
 /* ========================= Utilities ====================== */
 /* --------------- display ---------------- */
 
@@ -585,37 +592,37 @@ nav form input:focus{
 
 
 /* Pets */
-.pets .wrapper{
+.pets .wrapper, .products .wrapper{
     --cols: 4;
     display: grid;
     grid-template-columns: repeat(var(--cols), 1fr);
     gap: 20px;
 }
 
-.pets .wrapper .card{
+.pets .wrapper .card, .products .wrapper .card{
     padding: .5rem;
     background: #fff;
     border-radius: var(--fs-12);
     box-shadow: var(--shadow);
 }
-.pets .wrapper .card-details{
+.pets .wrapper .card-details, .products .wrapper .card-details{
     padding: .75rem .5rem
 }
-.pets .wrapper .card img{
+.pets .wrapper .card img, .products .wrapper .card>img{
     width: 100%;
 }
-.pets h3{
+.pets h3, .products h3{
     font-size: var(--fs-16);
     color: var(--nutral-100);
 }
 
-.pets ul{
+.pets ul, .products ul{
     display: flex;
     --gap: 1.5rem;
     gap: var(--gap);
     margin-block: .25rem;
 }
-.pets ul li{
+.pets ul li, .products ul li{
     font-family: var(--font-family-medium);
     color: var(--nutral-60);
     margin-bottom: 0;
@@ -637,27 +644,144 @@ nav form input:focus{
     translate: -50% -50%
 }
 
-.pets .price{
+.pets .price, .products .price{
     font-family: var(--font-family-medium);
     color: var(--nutral-100);
 }
 
 @media (max-width: 991.98px){
-    .pets .wrapper{
+    .pets .wrapper, .products .wrapper{
         --cols: 3;
     }
 }
 @media (max-width: 767.98px){
-    .pets .wrapper{
+    .pets .wrapper, .products .wrapper{
         --cols: 2;
     }
 }
 @media (max-width: 480px){
-    .pets .wrapper{
+    .pets .wrapper, .products .wrapper{
         --cols: 1;
     }
 }
 
+/* =================Pet Importance================ */
+.pet-importance{position: relative; background: var(--primary-color); margin-top: 3.75rem; padding-top: 2.25rem; border-radius: 20px; overflow: hidden;}
+
+.pet-importance .right-panel{
+    max-width: 474px;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+    padding-right: 5rem;
+}
+.pet-importance .image-container{
+    position: relative;
+}
+
+.pet-importance .decor-rect:nth-child(1){
+    left: 5%;
+    top: 15%;
+    width: 787px;
+    rotate: 25deg;
+    transform-origin: top left;
+    background: var(--primary-dark);
+}
+.pet-importance .decor-rect:nth-child(2){
+    left: 100%;
+    rotate: 25deg;
+    translate: -75% -20%;
+    width:  768px;
+    aspect-ratio: 4/3;
+    background-color: var(--secondary-600);
+}
+
+.pet-importance .display-2{
+    font-weight: 700;
+}
+.pet-importance .display-2 span{display: block;}
+
+
+
+@media (max-width: 1200px){
+    .pet-importance .decor-rect:nth-child(2) {
+        translate: -68% -22%;
+    }
+    .pet-importance .decor-rect:nth-child(1) {
+        left: 4%;
+        top: 19%;
+    }
+    .pet-importance .right-panel{
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 991.98px){
+    .pet-importance {
+        flex-direction: column-reverse;
+        gap: 23px;
+    }
+    .pet-importance .right-panel{
+        text-align: center;
+        padding-inline: 1.5rem
+    }
+        .pet-importance .decor-rect:nth-child(2){
+        width: 600px;
+        height: 600px;
+                rotate: 14deg;
+                left: 0;
+        translate: -3% -39%;
+        border-radius: 99px;
+    }
+        .pet-importance .decor-rect:nth-child(1) {
+        left: 4%;
+        top: calc(100% - 30%);
+        border-radius: 99px;
+        width: 787px;
+        height: 787px;
+    }
+}
+
+
+
+/* =================Products =========================*/
+.products .card {
+    display: flex;
+    flex-direction: column;
+}
+.products .card .card-details{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.products .wrapper .card img{
+    border-radius: 10px;
+}
+.products .card .gift-wrap{
+    padding: 8px 10px 6px;
+    background: var(--secondary-600);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    --gap: 25px;
+    gap: var(--gap);
+    margin-top: auto;
+}
+.products .gift-wrap strong{
+    display: block;
+    position: relative;
+}
+.products .gift-wrap strong::before{
+    content:'';
+    position: absolute;
+    left: calc((var(--gap) / 2) * -1);
+    top: 50%;
+    width: 4px;
+    aspect-ratio: 1/1;
+    background: var(--primary-color);
+    border-radius: 50%;
+    translate: -50%;
+}
 
 /*========================= Footer ========================== */
 
