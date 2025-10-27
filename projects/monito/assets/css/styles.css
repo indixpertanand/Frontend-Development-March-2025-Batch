@@ -110,6 +110,33 @@
     :root{
         --btn-padding-block: .83em;
         --btn-padding-inline: 1.5em;
+
+         --display-1: 52px;
+        --display-2: 46px;
+
+        --h1-font: 42px;
+        --h2-font: 30px;
+        --h3-font: 24px;
+        --h4-font: 20px;
+    }
+}
+@media (max-width: 767.98px){
+    :root{
+
+        --display-1: 46px;
+        --display-2: 36px;
+
+        --h1-font: 28px;
+        --h2-font: 20px;
+        --h3-font: 24px;
+        --h4-font: 20px;
+
+        --fs-20: 18px;
+        --fs-16: 14px;
+        --fs-14: 12px;
+        --fs-12: 10px;
+        --fs-10: 9px;
+        --fs-8: 8px;
     }
 }
 
@@ -544,6 +571,7 @@ nav form input:focus{
 .home-top-banner .left-panel h1{
     margin-bottom: 1.5rem;
 }
+.home-top-banner .left-panel h1 span{display: block;}
 .home-top-banner .left-panel p{
     margin-bottom: 2.13rem;
 }
@@ -659,10 +687,15 @@ nav form input:focus{
         --cols: 2;
     }
 }
-@media (max-width: 480px){
+@media (max-width: 575px){
     .pets .wrapper, .products .wrapper{
-        --cols: 1;
+        gap: 12px
     }
+    .pets ul, .products ul{
+        flex-direction: column;
+        --gap: .25rem
+    }
+    .pets ul li:not(:last-child)::after{display: none;}
 }
 
 /* =================Pet Importance================ */
@@ -783,6 +816,88 @@ nav form input:focus{
     translate: -50%;
 }
 
+
+/* =======================Pet Sellers ================== */
+.pet-sellers{
+    margin-top: 6rem;
+}
+
+.pet-sellers .heading-wrapper{
+    margin-bottom: 1rem;
+}
+
+.pet-sellers .wrapper{
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 7), 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.pet-sellers .wrapper li{
+    margin-bottom: 0;
+}
+
+@media (max-width: 991.98px){
+    .pet-sellers .wrapper{
+        --cols: 4
+    }
+}
+@media (max-width: 574.98px){
+    .pet-sellers .wrapper{
+        --cols: 3
+    }
+    .pet-sellers .wrapper li:last-child{display: none;}
+}
+
+/* ===================== Adoption ==================== */
+
+.adoption{
+    margin-block: 40px 60px;
+    background-color: #FFB775;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+.adoption .left-panel{padding-left: 85px; width: 50%}
+.adoption .left-panel :is(h2, span){line-height: 1.5; display: block;}
+.adoption .left-panel p{margin-top: .5rem; font-size: var(--fs-12); max-width: 205px; margin-bottom: 2.5rem;}
+.adoption .decor-rect:first-child{
+    width: 780px;
+    height: 635px;
+    rotate: -25deg;
+    background: var(--secondary-600);
+    translate: -30% -18%;
+}
+.adoption .decor-rect:nth-child(2){
+    width: 785px;
+    height: 785px;
+    background: var(--secondary-600);
+    opacity: 30%;
+    top: 10%;
+    right: 0%;
+    transform-origin: top right;
+    rotate: -28deg;
+}
+.adoption :is(.left-panel, .image-container){
+    position: relative;
+}
+
+@media (max-width: 992px){
+    .adoption{
+        flex-direction: column;
+    }
+    .adoption .left-panel{width: 100%; text-align: center; padding: 20px;}
+    .adoption .left-panel p{margin-inline: auto; }
+
+    .adoption .decor-rect:nth-child(2){
+        top: 42%;
+        rotate: -13deg
+    }
+    .adoption .decor-rect:first-child {
+        rotate: -12deg;
+        translate: -7% -53%;
+    }
+}
+
 /*========================= Footer ========================== */
 
 footer{
@@ -861,11 +976,17 @@ footer hr{
         flex-direction: column;
     }
     footer .newsletter .text-content, footer .newsletter form{width: 100%;}
+
+    footer nav{flex-direction: column; align-items: center;}
 }
 @media (max-width: 767.98px){
+    footer{
+        border-radius: 20px 20px 0 0;
+    }
     .footer-bottom{flex-direction: column; gap: 1.5rem;}
     .footer-bottom p, .footer-bottom .privacy-wrapper{order: 1;}
     .newsletter form{
         flex-direction: column;
     }
+
 }

@@ -1,0 +1,93 @@
+
+:root{
+    --abc: #000;
+}
+
+@import './variables';
+@import './reset';
+@import './functions';
+
+@import './mixins';
+
+.text-black{
+    color: $black;
+}
+.text-primary-100{
+    color: rgba($primary, .1);
+}
+
+.header{
+    background: black;
+    a{
+        color: white;
+        &:hover{
+            color: red;
+        }
+    }
+   
+    &_top{
+        background: red;
+    }
+
+    .menubar{
+        @include flex(center, center);       
+
+        li{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+ul{
+    list-style: none;
+    padding-left: 0;
+    li{
+        margin-bottom: 1rem; 
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+button{
+    border: 1px solid transparent;
+    border-radius: 0;    
+}
+
+h1, h2{font-weight: 700}
+
+.btn{
+    @extend button;
+}
+
+li{
+    background: map-get($map: $colors, $key: "success");
+    color: #fff;
+}
+
+@each $key, $value in $colors{
+    .text-#{$key}{
+        color: $value;
+    }
+    .bg-#{$key}{
+        background-color: $value;
+        @if(is-dark($value)){
+            color: #fff
+        }@else{
+            color: #000
+        }
+    }
+}
+
+
+h2{
+    padding: 1rem;
+    font-weight: 900;
+    background: rgb(255, 255, 255);
+    // color: rgba($primary, .4);
+    // color: lighten(red, 0%);
+    color: darken(red, 30%);
+
+}
+
